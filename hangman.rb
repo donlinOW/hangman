@@ -1,4 +1,4 @@
-words = ["word", "ruby", "code", "hi"]
+words = File.readlines('words.txt').map(&:chomp)
 word = words.sample
 
 lives = 9
