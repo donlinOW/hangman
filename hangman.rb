@@ -11,4 +11,11 @@ until lives == 0 || display == word
   puts "Guessed Letters: #{guessed_letters.join(', ')}"
   puts "Guess a letter: "
   guess = gets.chomp.downcase
+
+  if guessed_letters.include?(guess)
+    puts "You already guessed that letter!"
+    next
+  end
+
+  guessed_letters << guess
 end
