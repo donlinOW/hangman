@@ -18,4 +18,14 @@ until lives == 0 || display == word
   end
 
   guessed_letters << guess
+
+  if word.include?(guess)
+    word.chars.each_with_index do |char, index|
+      if char == guess
+        display[index] = guess
+      end
+    end
+  else
+    lives -= 1
+  end
 end
