@@ -29,3 +29,9 @@ until lives == 0 || display == word
     lives -= 1
   end
 end
+
+if display == word
+  puts "Congratulations! You guessed the word: #{word}"
+else
+  puts "Game over! The word was: #{word}"
+end
