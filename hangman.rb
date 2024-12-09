@@ -12,6 +12,11 @@ until lives == 0 || display == word
   puts "Guess a letter: "
   guess = gets.chomp.downcase
 
+  if guess.length != 1 || !('a'..'z').include?(guess)
+    puts "Invalid input, please enter a single letter!"
+    next
+  end
+
   if guessed_letters.include?(guess)
     puts "You already guessed that letter!"
     next
